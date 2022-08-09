@@ -1,0 +1,45 @@
+---
+title: "Day 2 Activities"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+vec_1 <- c(2, 45, 9, 10, 8, 12, 1, 0)
+
+class(vec_1)
+typeof(vec_1)
+
+vec_1_e3 <- vec_1[3]
+vec_1_e1 <- vec_1[1]
+vec_1_e5to7 <- vec_1[5:7]
+
+vec_1_char <- as.character(vec_1)
+```
+
+```{r}
+vec_2 <- c(town = "Santa Barbara", location = "Rincon", swell = "south")
+class(vec_2)
+length(vec_2)
+
+vec_2_e2 <- vec_2
+vec_2_e2 <- vec_2["location"]
+```
+
+```{r}
+
+df_1 <- tribble(
+  ~region, ~species, ~count,
+  "A", "otter", 12,
+  "B", "great white", 2,
+  "A", "sea lion", 36,
+  "D", "gray whale", 6)
+class(df_1)
+class(df_1$species)
+
+max_count <- max(df_1$count)
+```
